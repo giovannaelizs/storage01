@@ -24,4 +24,8 @@ public class UserService {
     public UserBD update(UserBD userBD) {
         return repo.save(userBD);
     }
+
+    public void delete(long cod) {
+        repo.deleteById(cod);
+    }
 }

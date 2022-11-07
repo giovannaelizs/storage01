@@ -39,7 +39,7 @@ public class UserController {
         return new ResponseEntity<>(userUpdate, HttpStatus.OK);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{cod}")
     public ResponseEntity<Void> delete(@PathVariable long cod) {
         service.delete(cod);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
